@@ -1,0 +1,504 @@
+---
+layout: workshop
+root: .
+venue: "School of Global Policy and Strategy (GPS) - Skills Courses"      # brief name of host site without address (e.g., "Euphoric State University")
+address: "Virtual"    # street address of workshop (e.g., "123 Forth Street, Blimingen, Euphoria")
+country: "us"    # country (lowercase two-letter ISO code such as "fr" - see https://en.wikipedia.org/wiki/ISO_3166-1)
+language: "en"   # language (lowercase two-letter ISO code such as "fr" - see https://en.wikipedia.org/wiki/ISO_639-1)
+latlng:     # fractional latitude and longitude (e.g., "41.7901128,-87.6007318"; you can use http://www.latlong.net/)
+humandate: "Jan 10 - Mar 9, 2023"  # human-readable date (e.g., "Feb 17-18, 2020")
+humantime: "2:00 pm - 3:20 pm"  # human-readable time (e.g., "9:00 am - 4:30 pm")
+startdate: "2023-01-10"  # use YYYY-MM-DD format like "2015-01-01"
+enddate: "2023-03-09"  # use YYYY-MM-DD format like" 2015-01-02"
+days: "Tuesday, Thursday"
+instructor: ["Reid Otsuji (Library)", "Stephanie Labou (Library)", "Kimberly Thomas (Research ITS)", "Eastern Kang (Pediatrics)", "Carolina Dantas (Medicine)", "Rukmini Ravi (SDSC)" ] # list of names like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
+helper: ["Kimberly Thomas (Research ITS)", "Celeste Allaband (Pediatrics)", "Reid Otsuji (Library)", "TA: Pending (GPS)"]     # list of names like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+contact: "kkt008@ucds.edu, spsardesai@ucsd.edu, rotsuji@ucsd.edu"    # contact email address for workshop organizer, such as "grace@hopper.org"
+
+---
+<!--
+  HEADER
+
+  Edit the values in the block above to be appropriate for your workshop.
+  If the value is not 'true', 'false', 'null', or a number, please use
+  double quotation marks around the value, unless specified otherwise.
+  And run 'tools/check' *before* committing to make sure that changes are good.
+-->
+
+<!--
+  INTRODUCTION
+
+  Edit the general explanatory paragraph below if you want to change
+  the pitch.
+-->
+<p>
+  This is the website for the School of Global Policy and Strategy Skills Courses.   In order to earn a certificate of proficiency, you must attend all of the class meetings for the course, do the short assignments, and pass the quizzes.
+</p>
+
+
+<!--
+  AUDIENCE
+
+  Explain who your audience is.  (In particular, tell readers if the
+  workshop is only open to people from a particular institution.
+-->
+<p id="who">
+  <strong>Who:</strong>
+  The course is aimed at GPS graduate students.
+  <strong>You don't need to have any previous knowledge of the tools that will
+    be presented at the workshop.</strong>
+  </p>
+
+<!--
+  LOCATION
+
+  This block displays the address and links to maps showing directions
+  if the latitude and longitude of the workshop have been set.  You
+  can use http://itouchmap.com/latlong.html to find the lat/long of an
+  address.
+-->
+{% if page.latlng %}
+<p id="where">
+  <strong>Where:</strong>
+  {{page.address}}.
+</p>
+{% endif %}
+
+<!--
+  SPECIAL REQUIREMENTS
+
+  Modify the block below if there are any special requirements.
+-->
+<p id="requirements">
+  <strong>Requirements:</strong> Participants must bring a laptop with
+  a few specific software packages installed (listed
+  <a href="#setup">below</a>).
+</p>
+
+<!--
+  CONTACT EMAIL ADDRESS
+
+  Display the contact email address set in the header.  If an address
+  isn't set in the header, the Software Carpentry admin address is
+  used.
+-->
+<p id="contact">
+  <strong>Contact</strong>:
+  Please mail
+  {% if page.contact %}
+  <a href='mailto:{{page.contact}}'>{{page.contact}}</a>
+  {% else %}
+  <a href='mailto:{{site.contact}}'>{{site.contact}}</a>
+  {% endif %}
+  for more information.
+</p>
+
+<p id="certificate">
+  <strong>Assessment</strong>:
+  A certificate of proficiency will be given to students who:
+</p>
+
+<ul>
+  <li>Attend/view all classes</li>
+  <li>Passes quizzes</li>
+  <li>Satisfactorily completes the weekly assignments</li>
+</ul>
+
+
+<p id = "data">
+  <strong>Data:</strong>
+  <ul>
+    <!--
+    <li>Download the <a href="http://swcarpentry.github.io/shell-novice/shell-novice-data.zip">shell-novice-files.zip </a> and move the file to your <strong>Desktop</strong>.</li>
+    <li>Double-click on the zip file to unzip it. You should end up with a new folder called <strong>data-shell</strong>.</li>
+  -->
+    <li>Download the <a href="http://swcarpentry.github.io/sql-novice-survey/files/survey.db">survey.db</a> and put it on your desktop inside a folder labeled "sql" .</li>
+  </ul>
+
+</p>
+
+
+<p id="help">
+{% if site.lib_appt %}
+  <strong>Need help?</strong>:
+  <ul>
+    <li> Reid Otsuji: Email <a href='mailto:{{page.contact}}'>{{page.contact}}</a></li>
+{% endif %}
+  <li>TA Pending: Email pending, Office Hours: TBD<!-- <a href="{{site.lib_data_lab}}">Library Data/GIS Lab</a> --> </li>
+  <li><a href="{{site.lib_data_lab}}">Library Data/GIS Lab</a> has R specialists</li>
+</ul>
+</p>
+<hr/>
+
+<p>
+<strong>Credits:</strong>  The course materials are adpated from the Carpentries <a href="https://carpentries.org/workshops-curricula/">lessons</a>. Many thanks to the authors of those lessons.
+</p>
+
+<!--
+  SCHEDULE
+
+  Show the workshop's schedule.  Edit the items and times in the table
+  to match your plans.  You may also want to change 'Day 1' and 'Day
+  2' to be actual dates or days of the week.
+-->
+<h2 id="schedule">GPS Skills Course Schedule</h2>
+<div class="row">
+  <div>
+    <table class="table">
+     <thead><tr> <th><strong>Dates</strong></th> <th><strong>Course</strong></th> <th><strong>Syllabus</strong></th> </tr></thead>
+     <tbody>
+      <tr><td>Jan 10 - Jan 26</td><td> Python Skills Course </td><td> Running and Quitting; Variables and Assignment; Data Types and Type Conversion; Built-in Functions and Help; Libraries; Errors & Exceptions; Reading Tabular Data into DataFrames; Pandas Dataframes; Plotting; Lists; For Loops; Conditionals; Looping Over Data Sets; Writing Functions </td></tr>
+      <tr><td>Jan 31 - Feb 16</td><td> R Skills Course </td><td> Introduction to R and RStudio; Seeking Help; Data Structures; Exploring Data Frames; Dataframe manipulation with dplyr; Data Frame Manipulation with tidyr; Plotting with ggplot2; Control Flow; Producing Reports with knitr </td></tr>
+      <tr><td>Feb 21 - Mar 9</td><td> Data Management Skills Course</td><td> Intro to the Unix Shell; Git & Github; DM Best Practices; Tidy Data; SQL</td></tr>
+      </tbody></table>
+  </div>
+</div>
+
+<h2 id="curriculum">Curriculum</h2>
+<p id = "curriculum">
+For this workshop we will be referencing the <a href="https://swcarpentry.github.io/r-novice-gapminder/">R for Reproducible Scientific Analysis</a>, <a href="https://datacarpentry.org/r-intro-geospatial/">Introduction to R for Geospatial Data</a><a href="http://swcarpentry.github.io/python-novice-gapminder/"> Plotting and Programming in Python</a>, <a href="https://librarycarpentry.org/lc-shell/">The UNIX Shell</a>, <a href="https://librarycarpentry.org/lc-git">Library Carpentry: Introduction to Git</a> , <a href="https://librarycarpentry.org/lc-sql/">Library Carpentry: SQL</a>, <a href="https://swcarpentry.github.io/sql-novice-survey/">Databases and SQL</a>, and <a href="https://datacarpentry.org/spreadsheets-socialsci/">Data Organization in Spreadsheets for Social Scientists</a> Carpentries curricula. 
+</p>
+
+<hr/>
+
+<h2 id="notes">Collaborative</h2>
+<p>
+  We will use HackMD for collaborative notes, sharing URLs and bits of code.
+  <br/>
+  <strong>Python Course HackMD:</strong> <a href="https://hackmd.io/@kkt008/gps-python-2023">https://hackmd.io/@kkt008/gps-python-2023</a>.
+  <br/>
+  <strong>R Course HackMD:</strong> <a href="https://hackmd.io/@kkt008/gps-r-2023">https://hackmd.io/@kkt008/gps-r-2023</a>. 
+  <br/>
+  <strong>DM Course HackMD:</strong> <a href="https://hackmd.io/@kkt008/gps-dm-2023">https://hackmd.io/@kkt008/gps-dm-2023</a>. 
+</p>
+
+<hr/>
+<!--
+  SETUP
+
+  Delete irrelevant sections from the setup instructions.  Each
+  section is inside a 'div' without any classes to make the beginning
+  and end easier to find.
+
+  This is the other place where people frequently make mistakes, so
+  please preview your site before committing, and make sure to run
+  'tools/check' as well.
+-->
+
+<h2 id="setup">Setup</h2>
+
+<p>
+  To participate in this workshop, you will need
+  access to the software described below. In addition, you will
+  need an up-to-date web browser.
+</p>
+
+<!-- Start of 'R' section. -->
+<div id="r">
+  <h3>R</h3>
+  <p>
+    <a href="https://www.r-project.org">R</a> is a programming language
+    that is especially powerful for data exploration, visualization, and
+    statistical analysis. To interact with R, we use
+    <a href="https://www.rstudio.com/">RStudio</a>.
+  </p>
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event,'RWindows')">Windows</button>
+    <button class="tablinks" onclick="openTab(event,'RMacOS')">MacOS</button>
+    <button class="tablinks" onclick="openTab(event,'RLinux')">Linux</button>
+  </div>
+  <div id="RWindows" class="tabcontent">
+    <p>
+      Install R by downloading and running
+      <a href="https://cran.r-project.org/bin/windows/base/release.htm">this .exe file</a>
+      from <a href="https://cran.r-project.org/index.html">CRAN</a>.
+      Also, please install the
+      <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>.
+      Note that if you have separate user and admin accounts, you should run the
+      installers as administrator (right-click on .exe file and select "Run as
+      administrator" instead of double-clicking). Otherwise problems may occur later,
+      for example when installing R packages.
+    </p>
+    <p><strong>Video Tutorial:</strong> <a href="https://youtu.be/q0PjTAylwoU">SWC R Install Windows</a></p>
+  </div>
+  <div id="RMacOS" class="tabcontent">
+    <p>
+      Install R by downloading and running
+      <a href="https://cran.r-project.org/bin/macosx/R-latest.pkg">this .pkg file</a>
+      from <a href="https://cran.r-project.org/index.html">CRAN</a>.
+      Also, please install the
+      <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>.
+    </p>
+    <p><strong>Video Tutorial:</strong> <a href="https://youtu.be/5-ly3kyxwEg">SWC R Install Mac</a></p>     
+  </div>
+  <div id="RLinux" class="tabcontent">
+    <p>
+      Instructions for R installation on various Linux platforms (debian,
+      fedora, redhat, and ubuntu) can be found at
+      <https://cran.r-project.org/bin/linux/>. These will instruct you to
+      use your package manager (e.g. for Fedora run
+      <code>sudo dnf install R</code> and for Debian/Ubuntu, add a ppa
+      repository and then run <code>sudo apt-get install r-base</code>).
+      Also, please install the
+      <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>.
+    </p>
+  </div>
+</div>
+
+<!-- End of 'R' section. -->
+
+<!-- Start of 'Python' section. -->
+<div id="python">
+  <h3>Python</h3>
+  <p>
+    We will teach Python using the <a href="https://jupyter.org/">Jupyter Notebook</a>,
+    a programming environment that runs in a web browser (Jupyter Notebook will be installed by Anaconda). For this to work you will need a reasonably
+    up-to-date browser. The current versions of the Chrome, Safari and
+    Firefox browsers are all
+    <a href="https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#browser-compatibility">supported</a>
+    (some older browsers, including Internet Explorer version 9
+    and below, are not).
+  </p>
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event,'PythonWindows')">Windows</button>
+    <button class="tablinks" onclick="openTab(event,'PythonMacOS')">MacOS</button>
+    <button class="tablinks" onclick="openTab(event,'PythonLinux')">Linux</button>
+  </div>
+  <div id="PythonWindows" class="tabcontent">
+    <ol>
+      <li>Open <a href="https://www.anaconda.com/products/individual#download-section">https://www.anaconda.com/products/individual#download-section</a> with your web browser.</li>
+      <li>Download the Anaconda for Windows installer with Python 3. (If you are not sure which version to choose, you probably want the 64-bit Graphical Installer <em>Anaconda3-...-Windows-x86_64.exe</em>)</li>
+      <li>Install Python 3 by running the Anaconda Installer, using all of the defaults for installation <em>except</em> make sure to check <strong>Add Anaconda to my PATH environment variable</strong>.</li>
+    </ol>
+    <p><strong>Video Tutorial:</strong> <a href="https://youtu.be/xxQ0mzZ8UvA">SWC Install Python on Windows</a></p>
+  </div>
+  <div id="PythonMacOS" class="tabcontent">
+    <ol>
+      <li>Open <a href="https://www.anaconda.com/products/individual#download-section">https://www.anaconda.com/products/individual#download-section</a> with your web browser.</li>
+      <li>Download the Anaconda Installer with Python 3 for macOS (you can either use the Graphical or the Command Line Installer).</li>
+      <li>Install Python 3 by running the Anaconda Installer using all of the defaults for installation.</li>
+    </ol>
+    <p><strong>Video Tutorial:</strong> <a href="https://youtu.be/TcSAln46u9U">SWC Install Python on Mac</a></p>     
+  </div>
+  <div id="PythonLinux" class="tabcontent">
+    <ol>
+      <li>Open <a href="https://www.anaconda.com/products/individual#download-section">https://www.anaconda.com/products/individual#download-section</a> with your web browser.</li>
+      <li>Download the Anaconda Installer with Python 3 for Linux.<br>
+        (The installation requires using the shell. If you aren't
+        comfortable doing the installation yourself
+        stop here and request help at the workshop.)
+      </li>
+      <li>
+        Open a terminal window and navigate to the directory where
+        the executable is downloaded (e.g., `cd ~/Downloads`).
+      </li>
+      <li>
+        Type <pre>bash Anaconda3-</pre> and then press
+        <kbd>Tab</kbd> to autocomplete the full file name. The name of
+        file you just downloaded should appear.
+      </li>
+      <li>
+        Press <kbd>Enter</kbd>
+        (or <kbd>Return</kbd> depending on your keyboard).
+        You will follow the text-only prompts.
+        To move through the text, press <kbd>Spacebar</kbd>.
+        Type <code>yes</code> and press enter to approve the license.
+        Press <kbd>Enter</kbd> (or <kbd>Return</kbd>)
+        to approve the default location
+        for the files.
+        Type <code>yes</code> and press
+        <kbd>Enter</kbd> (or <kbd>Return</kbd>)
+        to prepend Anaconda to your <code>PATH</code>
+        (this makes the Anaconda distribution the default Python).
+      </li>
+      <li>
+        Close the terminal window.
+      </li>
+    </ol>
+  </div>
+</div>
+
+<!-- End of 'Python' section. -->
+
+<!-- Start of Unix Shell section. -->
+
+<div id="shell">
+  <h3>The Bash Shell</h3>
+  <p>
+    Bash is a commonly-used shell that gives you the power to do
+    tasks more quickly.
+  </p>
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event,'ShellWindows')">Windows</button>
+    <button class="tablinks" onclick="openTab(event,'ShellMacOS')">MacOS</button>
+    <button class="tablinks" onclick="openTab(event,'ShellLinux')">Linux</button>
+  </div>
+  <div id="ShellWindows" class="tabcontent">
+    <ol>
+       <li>Download the Git for Windows <a href="https://gitforwindows.org/">installer</a>.</li>
+       <li>Run the installer and follow the steps below:
+          <ol>
+            <p>Git 2.27.0 Setup<p/>
+            <li>Click on "Next" four times (two times if you've previously installed Git).  You don't need to change anything in the Information, location, components, and start menu screens.</li>
+            <li><strong>From the dropdown menu select "Use the nano editor by default" and click on "Next".</strong></li>
+              <p>Adjusting your PATH environment</p>
+            <li>Ensure that "Git from the command line and also from 3rd-party software" is selected and click on "Next". (If you don't do this Git Bash will not work properly, requiring you to remove the Git Bash installation, re-run the installer and to select the "Git from the command line and also from 3rd-party software" option.)</li>
+              <p>Choosing the SSH executable</p>
+              <p>Choosing HTTPS transport backend</p>
+            <li>Ensure that "Use the native Windows Secure Channel library" is selected and click on "Next".</li>
+              <p>This should mean that people stuck behind corporate firewalls that do MITM attacks with their own root CA are still able to access remote git repos.</p>
+              <p>Configuring the line ending conversions</p>
+            <li>Ensure that "Checkout Windows-style, commit Unix-style line endings" is selected and click on "Next".</li>
+              <p>Configuring the terminal emulator to use with Git Bash</p>
+            <li><strong>Ensure that "Use Windows' default console window" is selected and click on "Next".</strong></li>
+              <p>Configuring extra options</p>
+            <li>Ensure that "Default (fast-forward or merge) is selected and click "Next"</li>
+            <li>Ensure that "Enable file system caching" and "Enable Git Credential Manager" are selected and click on "Next".</li>
+              <p>Configuring experimental options</p>
+            <li>Click on "Install".</li>
+              <p>Installing</p>
+              <p>Completing the Git Setup Wizard</p>
+              <p>as of 2020-06-02, the Window will say "click Finish", but the button is labelled as "Next"</p>
+            <li>Click on "Finish" or "Next".</li>
+          </ol>
+      </li>
+          <li>If your "HOME" environment variable is not set (or you don't know what this is):
+            <ol>
+              <li>Open command prompt (Open Start Menu then type <code>cmd</code> and press <kbd>Enter</kbd>)</li>
+              <li>Type the following line into the command prompt window exactly as shown:
+                <p><code>setx HOME "%USERPROFILE%"</code></p>
+              </li>
+              <li>Press <kbd>Enter</kbd>, you should see <code>SUCCESS: Specified value was saved.</code></li>
+              <li>Quit command prompt by typing <code>exit</code> then pressing <kbd>Enter</kbd></li>
+            </ol>
+	  </li>
+        </ol>
+        <p>This will provide you with both Git and Bash in the Git Bash program.</p>
+        <p><strong>Video Tutorial:</strong> <a href="https://www.youtube-nocookie.com/embed/339AEqk9c-8?modestbranding=1&playsinline=1&iv_load_policy=3&rel=0">Windows Installation</a></p>     
+  </div>
+  <div id="ShellMacOS" class="tabcontent">
+    <p>The default shell in some versions of macOS is Bash, and Bash is available in all versions, so no need to install anything. You access Bash from the Terminal (found in <code>/Applications/Utilities</code>). See the Git installation <a href="#shell-macos-video-tutorial">video tutorial</a> for an example on how to open the Terminal. You may want to keep Terminal in your dock for this workshop.</p>
+        <p>
+            To see if your default shell is Bash type <code>echo $SHELL</code>
+            in Terminal and press the <kbd>Return</kbd> key. If the message
+            printed does not end with '/bash' then your default is something
+            else and you can run Bash by typing <code>bash</code>
+        </p>
+        <p>
+          If you want to change your default shell, see <a href="https://support.apple.com/en-au/HT208050" rel="noopener">
+          this Apple Support article</a> and follow the instructions on "How to change your default shell".
+        </p><strong>Video Tutorial</strong>
+        <a href="https://www.youtube-nocookie.com/embed/9LQhwETCdwY?modestbranding=1&playsinline=1&iv_load_policy=3&rel=0">MacOS Installation</a>
+   </div>
+   <div id="ShellLinux" class="tabcontent">
+      <p>
+        The default shell is usually Bash and there is usually no need to
+        install anything.
+      </p>
+      <p>
+        To see if your default shell is Bash type <code>echo $SHELL</code> in
+        a terminal and press the <kbd>Enter</kbd> key. If the message printed
+        does not end with '/bash' then your default is something else and you
+        can run Bash by typing <code>bash</code>.
+      </p>
+   </div>
+</div>
+<!-- End of Unix Shell section. -->
+
+<!-- Start of Git section. -->
+<div id="git">
+  <h3>Git</h3>
+  <p>
+    Git is a version control system that lets you track who made changes
+    to what when and has options for easily updating a shared or public
+    version of your code
+    on <a href="https://github.com/">github.com</a>. You will need a
+    <a href="https://help.github.com/articles/supported-browsers/">supported
+    web browser</a>.
+  </p>
+  <p>
+    You will need an account at <a href="https://github.com/">github.com</a>
+    for parts of the Git lesson. Basic GitHub accounts are free. We encourage
+    you to create a GitHub account if you don't have one already.
+    Please consider what personal information you'd like to reveal. For
+    example, you may want to review these
+    <a href="https://help.github.com/articles/keeping-your-email-address-private/">instructions
+      for keeping your email address private</a> provided at GitHub.
+  </p>
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event,'GitWindows')">Windows</button>
+    <button class="tablinks" onclick="openTab(event,'GitMacOS')">MacOS</button>
+    <button class="tablinks" onclick="openTab(event,'GitLinux')">Linux</button>
+  </div>
+    <div id="GitWindows" class="tabcontent">
+      <p>
+        Git should be installed on your computer as part of your Bash
+        install (see the
+        <a href="#shell">Shell installation instructions</a>).
+      </p>
+    </div>
+    <div id="GitMacOS" class="tabcontent">
+      <p>
+        <strong>For macOS</strong>, install Git for Mac
+        by downloading and running the most recent "mavericks" installer from
+        <a href="http://sourceforge.net/projects/git-osx-installer/files/">this list</a>.
+        Because this installer is not signed by the developer, you may have to
+        right click (control click) on the .pkg file, click Open, and click
+        Open on the pop up window.
+        After installing Git, there will not be anything in your <code>/Applications</code> folder,
+        as Git is a command line program.
+        <strong>For older versions of OS X (10.5-10.8)</strong> use the
+        most recent available installer labelled "snow-leopard"
+        <a href="http://sourceforge.net/projects/git-osx-installer/files/">available here</a>.
+      </p>
+      <p><strong>Video Tutorial: </strong><a href="https://youtu.be/9LQhwETCdwY">SWC Install Shell, Git, and Nano on Mac</a></p>
+    </div>
+    <div id="GitLinux" class="tabcontent">
+      <p>
+      If Git is not already available on your machine you can try to
+      install it via your distro's package manager. For Debian/Ubuntu run
+      <code>sudo apt-get install git</code> and for Fedora run
+      <code>sudo dnf install git</code>.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- End of Git section. -->
+
+
+<!-- start SQL Lite insrtuctions
+<div id="sql"> Start of 'SQLite' section.
+  <h3>SQLite</h3>
+  <p>
+    SQL is a specialized programming language used with databases.  We
+    use a simple database manager called
+    <a href="http://www.sqlite.org/">SQLite</a> in our lessons.
+  </p>
+
+  <div class="row">
+    <div class="col-md-4">
+      <h4 id="sql-windows">Windows</h4>
+      <p>
+        The <a href="{{site.swc_installer}}">Software Carpentry Windows Installer</a>
+        installs SQLite for Windows.
+        If you used the installer to configure nano, you don't need to run it again.
+      </p>
+    </div>
+    <div class="col-md-4">
+      <h4 id="sql-macosx">Mac OS X</h4>
+      <p>
+        SQLite comes pre-installed on Mac OS X.
+      </p>
+    </div>
+    <div class="col-md-4">
+      <h4 id="sql-linux">Linux</h4>
+      <p>
+        SQLite comes pre-installed on Linux.
+      </p>
+    </div>
+  </div>
+
+</div> 
+End of 'SQLite' section. -->
+<!--test note-->
