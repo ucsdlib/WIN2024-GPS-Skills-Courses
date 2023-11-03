@@ -1,8 +1,8 @@
 #--------------------------------------------------------------------------------
 # Values for this workshop - EDIT THIS SECTION.
 #--------------------------------------------------------------------------------
-workshop_repo   : "https://github.com/ucsdlib/win2016-gps-dm101"
-workshop_site   : "http://ucsdlib.github.io/win2016-gps-dm101"
+workshop_repo   : "https://github.com/ucsdlib/WIN2024-GPS-Skills-Courses"
+workshop_site   : "http://ucsdlib.github.io/WIN2024-GPS-Skills-Courses"
 #--------------------------------------------------------------------------------
 # Standard Software Carpentry settings - should not need to be modified.
 #--------------------------------------------------------------------------------
