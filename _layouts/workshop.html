@@ -20,6 +20,8 @@
     <meta name="eventbrite" content="{{page.eventbrite}}" />
     <meta name="instructor" content="{{page.instructor|join:'|'}}" />
     <meta name="helper" content="{{page.helper|join:'|'}}" />
+    <meta name="ta" content="{{page.ta|join:'|'}}" />
+    <meta name="zoomdj" content="{{page.zoomdj|join:'|'}}" />
     <meta name="contact" content="{{page.contact}}" />
     <meta name="eventtitle" content="{{page.eventtitle}}" />
 
@@ -52,10 +54,16 @@
                 to be announced.
                 {% endif %}
                 </p>
-                {% if page.helper %}
+                {% if page.ta %}
                 <p>
-                <strong>Helpers:</strong>
-                {{page.helper | join: ', ' %}}
+                <strong>TA:</strong>
+                {{page.ta | join: ', ' %}}
+                </p>
+                {% endif %}
+                {% if page.zoomdj %}
+                <p>
+                <strong>Zoom DJ:</strong>
+                {{page.zoomdj | join: ', ' %}}
                 </p>
                 {% endif %}
               </div>
